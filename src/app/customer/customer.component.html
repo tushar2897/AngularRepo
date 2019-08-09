@@ -1,0 +1,23 @@
+<table id="cust" style="text-align: center">
+    <tr>
+    <td>Customer Name</td>
+    <td><input [(ngModel)]="customer.name"></td>
+    </tr>
+    <tr>
+    <td>BirthDate</td>
+    <td><input  [(ngModel)]="customer.birthDate"></td>
+    </tr>
+</table>
+    <p>Your name is :{{customer.name | uppercase}}</p>
+{{customer.birthDate | date:"shortDate"}}<br>
+{{customer.birthDate | date:"mediumDate"}}<br>
+{{customer.birthDate | date:"longDate"}}<br>
+{{customer.birthDate | date:"fullDate"}}<br>
+{{customer.birthDate | date:"dd-MM-yyyy"}}<br>
+{{customer.birthDate | date:"dd MMM,yy"}}<br>
+{{customer.birthDate | date:"dd-MMMM-yy"}}<br>
+
+<button (click)="addCust()">Add Customer</button>
+<button (click)="changeDateFormat()">Change Date Format</button> <br>
+
+<p>Birth Date is {{customer.birthDate | date: format}}</p> 

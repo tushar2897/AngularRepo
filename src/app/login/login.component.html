@@ -1,0 +1,16 @@
+<form id="flog" style="text-align: center;">
+<table id="log">
+    <tr>
+        <td>Username</td>
+        <td><input type="text" name="user" [(ngModel)]="user.username"></td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td><input type="text" name="pass" [(ngModel)]="user.password"></td>
+    </tr>
+    <tr><input type="submit" (click)="validate()" value="Login"></tr>
+</table>
+
+</form>
+<p appHighlight>{{user.username | uppercase }}</p>
+{{user.username | lowercase }}<br> <br>
