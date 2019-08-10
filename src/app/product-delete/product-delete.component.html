@@ -1,3 +1,8 @@
+<div class="form-group">
+    <label for="pid">Product Id</label>
+    <input type="number" id="productId" class="form-control" name="productId" [(ngModel)]="product.productId" required>
+</div>
+
 <p>Are you sure you want to delete this?</p>
-<button (click)="delete(p.productId)">Confirm</button>
+<button (click)="delete()">Confirm</button>
 

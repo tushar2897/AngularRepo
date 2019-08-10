@@ -1,1 +1,56 @@
-<p>product-update works!</p>
+<!-- <table id="prod">
+    <tr>
+    <td>Product Id</td>
+    <td><input type="number"  [(ngModel)]="product.id"></td>
+    </tr>
+    <tr>
+    <td>Product Name</td>
+    <td><input type="text" [(ngModel)]="product.name"></td>
+    </tr>
+    <tr>
+    <td>Brand</td>
+    <td><input type="text"  [(ngModel)]="product.brand"></td>
+    </tr>
+    <tr>
+    <td>Price</td>
+    <td><input type="number"  [(ngModel)]="product.price"></td>
+    </tr>
+    <tr><p><button (click)="add()">Add Product</button></p></tr>
+</table>
+{{product.name | uppercase}} <br>
+{{product.brand | lowercase}} <br>
+{{product.price | currency}} <br>
+<p *ngIf="toggle">
+Show this Paragraph</p>
+<p *ngIf="!toggle">
+Don't Show this paragraph</p>
+<button (click)="checktoggle()" >Show Toggle</button> -->
+
+
+
+<div class="container">
+    <form>
+        <div class="form-group">
+                <label for="pid">Product Id</label>
+                <input type="number" id="productId" class="form-control" name="productId" [(ngModel)]="product.productId" required>
+        </div>
+
+        <div class="form-group">
+                <label for="name">Product Name</label>
+                <input type="text" id="name" class="form-control" name="name" [(ngModel)]="product.name" required>
+        </div>
+
+        <div class="form-group">
+                <label for="brand">Brand</label>
+                <input type="text" id="brand" class="form-control" name="brand" [(ngModel)]="product.brand" required>
+        </div>
+
+        <div class="form-group">
+                <label for="price">Price</label>
+                <input type="number" id="price" class="form-control" name="price" [(ngModel)]="product.price" required>
+        </div>
+
+        <button type="submit" class="btn btn-success" (click)="update()">Submit</button>
+    </form>
+</div>
+

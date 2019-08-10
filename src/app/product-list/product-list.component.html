@@ -11,9 +11,8 @@
             <td>{{p.name}}</td>
             <td>{{p.brand}}</td>
             <td>{{p.price}}</td>
-            <td><button routerLink="delete-product" >Delete</button></td>
-            <td><button routerLink="update-product">Update</button></td>
-        </tr>
-    
+        </tr> <br> <br>
+        <button routerLink="delete-product" >Delete</button>
+        <button routerLink="update-product" >Update</button>
 </table>
 <app-product-details *ngFor="let p of products" [product]="p"></app-product-details>

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { ProductService } from '../product.service';
 import { Product } from '../product';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-product-delete',
@@ -9,11 +10,16 @@ import { Product } from '../product';
 })
 export class ProductDeleteComponent implements OnInit {
 product:Product;
-  constructor(private productService:ProductService) { }
+@Output()
+productEmitter= new EventEmitter<Product>();
 
+  constructor(private productService:ProductService) { 
+    this.product=new Product();
+  }
   ngOnInit() {
   }
-delete(id:number){
-  this.productService.deleteProduct(id).subscribe();
+delete(){
+  this.productEmitter.emit(this.product);
+  this.productService.deleteProduct(this.product).subscribe();
 }
 }

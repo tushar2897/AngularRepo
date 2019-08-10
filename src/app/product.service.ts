@@ -16,8 +16,9 @@ getAllProducts(){
 addNewProduct(newProduct:Product){
   return this.http.post('http://localhost:8082/products/',newProduct);
 }
-deleteProduct(productId:number){
-  return this.http.delete('http://localhost:8082/products/delete/{productId}');
+deleteProduct(product:Product){
+  let id:number=product.productId;
+  return this.http.delete('http://localhost:8082/products/{id}');
 }
 updateProduct(product:Product){
   return this.http.put('http://localhost:8082/products/',product);
